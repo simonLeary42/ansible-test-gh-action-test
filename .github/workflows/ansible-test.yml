@@ -4,27 +4,21 @@ jobs:
   ansible-test:
     runs-on: ubuntu-latest
     steps:
-      - name: Perform integration testing with ansible-test
+      - name: pip show ansible-core (2.17)
         uses: ansible-community/ansible-test-gh-action@release/v1
         with:
-          ansible-core-version: stable-2.14
-          pre-test-cmd: echo This runs before the ansible-test invocation
+          ansible-core-version: stable-2.17
+          pre-test-cmd: pip show ansible-core
           target-python-version: 3.11
           controller-python-version: auto
           testing-type: integration
-          test-deps: ansible.netcommon
-      - name: Perform sanity testing with ansible-test
+          test-deps: []
+      - name: pip show ansible-core (2.18)
         uses: ansible-community/ansible-test-gh-action@release/v1
         with:
-          ansible-core-version: stable-2.14
-          testing-type: sanity
-      - name: Perform unit testing with ansible-test
-        uses: ansible-community/ansible-test-gh-action@release/v1
-        with:
-          ansible-core-version: stable-2.14
-          pre-test-cmd: echo This runs before the ansible-test invocation
+          ansible-core-version: stable-2.18
+          pre-test-cmd: pip show ansible-core
           target-python-version: 3.11
-          testing-type: units
-          test-deps: >-
-            ansible.netcommon
-            ansible.utils
+          controller-python-version: auto
+          testing-type: integration
+          test-deps: []
