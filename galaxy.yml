@@ -1,7 +1,7 @@
 ---
 # See https://docs.ansible.com/projects/ansible/latest/dev_guide/collections_galaxy_meta.html
 namespace: simonLeary42
-name: ansible-test-gh-action-test
+name: foobar
 version: 0.1.0
 readme: README.md
 authors:
