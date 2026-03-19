@@ -9,7 +9,7 @@ jobs:
         with:
           ansible-core-version: ${{ matrix.ansible-core-version }}
           testing-type: integration
-          target: molecule-prometheus-alternative
+          target: foobar
           pre-test-cmd: env; python -c 'from importlib.metadata import version; print(version("ansible-core"));'
     strategy:
       matrix:
