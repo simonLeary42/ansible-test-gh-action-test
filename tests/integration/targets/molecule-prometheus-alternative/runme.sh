@@ -1,3 +1,3 @@
 #!/usr/bin/env bash
 set -x
-python -c 'import ansible; print("import works OK")'
+env; python -c 'from importlib.metadata import version; print(version("ansible-core"));'
