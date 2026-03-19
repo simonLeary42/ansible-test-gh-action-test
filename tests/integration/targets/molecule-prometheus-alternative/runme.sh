@@ -1,2 +1,2 @@
 #!/usr/bin/env bash
-true
+pip show ansible-core
