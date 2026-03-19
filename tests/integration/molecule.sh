@@ -1,4 +1,2 @@
 #!/usr/bin/env bash
-set -x
-echo "+ pip show ansible-core"
-pip show ansible-core
+python -c 'import ansible; print("import works OK")'

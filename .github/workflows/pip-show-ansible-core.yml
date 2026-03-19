@@ -10,7 +10,7 @@ jobs:
           ansible-core-version: ${{ matrix.ansible-core-version }}
           testing-type: integration
           target: molecule-prometheus-alternative
-          pre-test-cmd: pip show ansible-core
+          pre-test-cmd: python -c 'import ansible; print("import works OK")'
     strategy:
       matrix:
         ansible-core-version: [stable-2.17, stable-2.18]
