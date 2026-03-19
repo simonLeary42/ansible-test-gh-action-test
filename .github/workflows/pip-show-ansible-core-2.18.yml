@@ -4,15 +4,6 @@ jobs:
   ansible-test:
     runs-on: ubuntu-latest
     steps:
-      - name: pip show ansible-core (2.17)
-        uses: ansible-community/ansible-test-gh-action@release/v1
-        with:
-          ansible-core-version: stable-2.17
-          pre-test-cmd: pip show ansible-core && exit 0
-          target-python-version: 3.11
-          controller-python-version: auto
-          testing-type: integration
-          # test-deps: ansible.netcommon
       - name: pip show ansible-core (2.18)
         uses: ansible-community/ansible-test-gh-action@release/v1
         with:
