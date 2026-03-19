@@ -12,7 +12,7 @@ jobs:
           target-python-version: 3.11
           controller-python-version: auto
           testing-type: integration
-          test-deps: []
+          # test-deps: ansible.netcommon
       - name: pip show ansible-core (2.18)
         uses: ansible-community/ansible-test-gh-action@release/v1
         with:
@@ -21,4 +21,4 @@ jobs:
           target-python-version: 3.11
           controller-python-version: auto
           testing-type: integration
-          test-deps: []
+          # test-deps: ansible.netcommon
