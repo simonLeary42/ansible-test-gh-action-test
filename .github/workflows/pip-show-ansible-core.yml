@@ -9,6 +9,7 @@ jobs:
         with:
           target-python-version: default
           controller-python-version: auto
+          ansible-core-version: ${{ matrix.ansible-core-version }}
           docker-image: --docker-privileged
           testing-type: integration
           target: molecule-prometheus-alternative
