@@ -5,7 +5,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: pip show ansible-core (2.18)
-        uses: ansible-community/ansible-test-gh-action@release/v1
+        uses: ansible-community/ansible-test-gh-action@d3a8ec7a59694e25e210fcd44738910149537f0e
         with:
           ansible-core-version: stable-2.18
           pre-test-cmd: pip show ansible-core && exit 0
